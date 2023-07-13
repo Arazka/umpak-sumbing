@@ -39,6 +39,11 @@
 .carousel {
   margin-top: 5.2rem;
 }
+
+.carousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 90vh;
+}
 /* END CAROUSEL */
 
 .footer h5 {
@@ -49,6 +54,12 @@
 @media (max-width: 993px) {
   .navbar-nav {
     margin-top: 0.8rem;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 70vh;
+    /* border: red solid; */
   }
 }
 
@@ -89,6 +100,11 @@
   .carousel-caption p {
     font-size: 0.9rem;
   }
+
+  .carousel .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 50vh;
+  }
 }
 
 @media (max-width: 576px) {
@@ -117,6 +133,11 @@
   .carousel button .carousel-control-prev-icon,
   .carousel button .carousel-control-next-icon {
     width: 1.3rem;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 40vh;
   }
 }
 
