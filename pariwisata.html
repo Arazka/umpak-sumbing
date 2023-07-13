@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Umpak Sumbing | Bandongan</title>
+    <link rel="stylesheet" href="css/pariwisata.css?version=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-item-center" href="#">
+          <img src="img/logo/logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top" style="border-radius: 1rem 0 1rem 0" />
+          <!-- <h6 class="my-auto mx-2">Umpak Sumbing</h6> -->
+          <div class="title mx-2 mx-md-3">
+            <div class="bandongan-1">Umpak Sumbing</div>
+            <div class="address">Kawasan Pedesaan Umpak Sumbing, Kecamatan Bandongan</div>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <img src="img/logo/logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top" style="border-radius: 1rem 0 1rem 0" />
+            <h6 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Umpak Sumbing</h6>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <ul class="navbar-nav justify-content-end mx-3">
+            <li class="nav-item">
+              <a class="nav-link active fs-6" aria-current="page" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-6" href="#">Pariwisata</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Dropdown </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- MAP -->
+    <section id="peta">
+      <div class="container-fluid">
+        <!-- <figure class="figure">
+          <img src="wisata desa/peta.png" class="figure-img img-fluid rounded" alt="..." />
+          <figcaption class="figure-caption">Peta Pariwisata Kawasan Umpak Sumbing</figcaption>
+        </figure>
+      </div> -->
+      <div id="map"></div>
+    </section>
+
+    <div class="container mt-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Pariwisata</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- DESA -->
+    <section id="desa">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-3">
+            <div class="card projects-img">
+              <img src="img/foto desa/desa bandongan.png" class="card-img-top" alt="projects1" />
+              <div class="card-body">
+                <h5 class="card-title">Desa Bandongan</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Baca selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card projects-img">
+              <img src="img/foto desa/Desa Gandusari.png" class="card-img-top" alt="projects1" />
+              <div class="card-body">
+                <h5 class="card-title">Desa Gandusari</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Baca selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card projects-img">
+              <img src="img/foto desa/Desa Kalegen.png" class="card-img-top" alt="projects1" />
+              <div class="card-body">
+                <h5 class="card-title">Desa Kalegen</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Baca selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card projects-img">
+              <img src="img/foto desa/Desa Ngepanrejo.png" class="card-img-top" alt="projects1" />
+              <div class="card-body">
+                <h5 class="card-title">Desa Ngepanrejo</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Baca selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card projects-img">
+              <img src="img/foto desa/Desa Rejosari.png" class="card-img-top" alt="projects1" />
+              <div class="card-body">
+                <h5 class="card-title">Desa Rejosari</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Baca selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card projects-img">
+              <img src="img/foto desa/desa sidorejo.png" class="card-img-top" alt="projects1" />
+              <div class="card-body">
+                <h5 class="card-title">Desa Sidorejo</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Baca selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card projects-img">
+              <img src="img/foto desa/Desa Trasan.png" class="card-img-top" alt="projects1" />
+              <div class="card-body">
+                <h5 class="card-title">Desa Trasan</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Baca selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer py-5 bg-dark text-light mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <h5>About Us</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam maximus elit at massa semper ullamcorper.</p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5>Explore</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Beranda</a></li>
+              <li><a href="#">Pariwisata</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <h5>Contact</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-geo-alt-fill"></i> Kecamatan Bandongan, Kabupaten Magelang, Jawa Tengah</li>
+              <li><i class="bi bi-envelope-fill"></i> umpaksumbing@gmail.com</li>
+              <li><i class="bi bi-phone-fill"></i> +1234567890</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-0">&copy; 2023 Umpak Sumbing. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+      var map = L.map('map').setView([-7.451769, 110.181861], 13);
+
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+
+      var kalegen = L.marker([-7.449556, 110.147705]).addTo(map);
+      var ngepanrejo = L.marker([-7.446271, 110.158786]).addTo(map);
+      var rejosari = L.marker([-7.4376037, 110.1831061]).addTo(map);
+      var gandusari = L.marker([-7.4464536, 110.1719103]).addTo(map);
+      var sidorejo = L.marker([-7.4553343, 110.1957571]).addTo(map);
+      var trasan = L.marker([-7.4689038, 110.1962396]).addTo(map);
+      var bandongan = L.marker([-7.4701643, 110.1789007]).addTo(map);
+
+      var polygon = L.polygon([
+          [-7.415393, 110.161005],
+          [-7.419381, 110.159209],
+          [-7.424318, 110.154945],
+          [-7.432028, 110.153489],
+          [-7.434336, 110.151660],
+          [-7.436688, 110.151483],
+          [-7.438985, 110.149056],
+          [-7.439137, 110.149216],
+          [-7.439321, 110.149774],
+          [-7.439557, 110.149973],
+          [-7.440132, 110.150220],
+          [-7.440717, 110.151156],
+          [-7.440791, 110.152143],
+          [-7.441259, 110.152585],
+          [-7.441900, 110.152553],
+          [-7.457278, 110.168705],
+          [-7.456119, 110.170229],
+          [-7.451895, 110.170079],
+          [-7.446342, 110.176173],
+          [-7.440916, 110.174113],
+          [-7.433129, 110.175507],
+          [-7.427852, 110.172375],
+          [-7.424511, 110.163169]
+      ]).addTo(map);
+
+      var polygon1 = L.polygon([
+          [-7.458111, 110.156161],
+          [-7.456441, 110.156110],
+          [-7.456036, 110.157080],
+          [-7.457403, 110.160397],
+          [-7.456644, 110.162132],
+          [-7.452798, 110.161163],
+          [-7.450723, 110.161469],
+          [-7.450976, 110.158560],
+          [-7.450521, 110.158152],
+          [-7.449762, 110.158866],
+          [-7.448851, 110.158458],
+          [-7.448446, 110.157641],
+          [-7.448598, 110.156876],
+          [-7.447231, 110.156314],
+          [-7.447737, 110.155804],
+          [-7.446472, 110.152946],
+          [-7.445157, 110.153456],
+          [-7.444600, 110.152844],
+          [-7.444853, 110.152027],
+          [-7.444600, 110.151517],
+          [-7.443790, 110.151313],
+          [-7.442829, 110.149884],
+          [-7.443689, 110.148353],
+          [-7.443777, 110.148287],
+          [-7.443457, 110.147579],
+          [-7.442436, 110.147943],
+          [-7.440691, 110.143587],
+          [-7.441287, 110.142085],
+          [-7.440734, 110.141442],
+          [-7.440681, 110.140551],
+          [-7.442106, 110.140015],
+          [-7.442117, 110.139435],
+          [-7.442564, 110.138920],
+          [-7.443606, 110.138942],
+          [-7.444138, 110.138599],
+          [-7.444532, 110.137322],
+          [-7.445457, 110.136700],
+          [-7.447011, 110.137236],
+          [-7.447532, 110.139103],
+          [-7.448085, 110.139543],
+          [-7.449659, 110.139537],
+          [-7.449988, 110.141630],
+          [-7.447053, 110.143097],
+          [-7.447141, 110.143837],
+          [-7.446926, 110.145138],
+          [-7.450785, 110.149489],
+          [-7.451405, 110.149668],
+          [-7.452290, 110.150242],
+          [-7.452277, 110.151160]
+      ]).addTo(map);
+
+      polygon.bindPopup("Desa Ngepanrejo");
+      polygon1.bindPopup("Desa Kalegen");
+
+      kalegen.bindPopup("Desa Kalegen").openPopup();
+      ngepanrejo.bindPopup("Desa Ngepanrejo").openPopup();
+      rejosari.bindPopup("Desa Rejosari").openPopup();
+      gandusari.bindPopup("Desa Gandusari").openPopup();
+      sidorejo.bindPopup("Desa Sidorejo").openPopup();
+      trasan.bindPopup("Desa Trasan").openPopup();
+      bandongan.bindPopup("Desa Bandongan").openPopup();
+    </script>
+  </body>
+</html>

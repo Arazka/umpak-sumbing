@@ -1,14 +1,21 @@
-/* body {
-  background-color: #898585;
-} */
-
-/* .container {
-  border: red solid;
-} */
-
-.header {
+#peta {
   margin-top: 5.4rem;
 }
+
+/* #peta .container-fluid {
+  border: red solid;
+  width: 100%;
+} */
+
+#map {
+  height: 500px;
+  width: 100%;
+  /* border: red solid; */
+}
+
+/* #desa {
+  background-color: rgb(216, 216, 216);
+} */
 
 /* CSS NAVBAR */
 .title .bandongan-1 {
@@ -35,12 +42,6 @@
 }
 /* END NAVBAR */
 
-/* CSS CAROUSEL */
-.carousel {
-  margin-top: 5.2rem;
-}
-/* END CAROUSEL */
-
 .footer h5 {
   text-decoration: underline;
 }
@@ -53,8 +54,14 @@
 }
 
 @media (max-width: 768px) {
-  .header {
+  #peta {
     margin-top: 4.4rem;
+  }
+
+  #map {
+    height: 400px;
+    width: 100%;
+    /* border: red solid; */
   }
 
   .title .bandongan-1 {
@@ -74,45 +81,12 @@
   .carousel {
     margin-top: 4.2rem;
   }
-
-  /* .carousel-inner {
-    border: red solid;
-    position: relative;
-  }
-
-  .carousel-caption {
-    border: red solid;
-    position: absolute;
-    margin-left: 5rem;
-  } */
-
-  .carousel-caption p {
-    font-size: 0.9rem;
-  }
 }
 
 @media (max-width: 576px) {
-  /* .title {
-    display: none;
-  } */
-
-  /* .title .bandongan-1 {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-
-  .title .address {
-    font-size: 0.7rem;
-  } */
-
   .navbar .container .offcanvas {
     width: 70%;
   }
-
-  /* .carousel button {
-    top: 1rem;
-    border: red solid;
-  } */
 
   .carousel button .carousel-control-prev-icon,
   .carousel button .carousel-control-next-icon {
